@@ -1,6 +1,33 @@
-set ts=2
-set sts=2
-set sw=2
-set expandtab
+" Expects Vim 8
+scriptencoding utf-8
+set encoding=utf-8
+
+source ~/.config/vim/xdg.vim
+
+" Packages set-up
+set packpath=$XDG_CONFIG_HOME/vim
+packadd minpac
+source $XDG_CONFIG_HOME/vim/packages.vim
+
+" Basic configuration
+filetype plugin indent on
 syntax enable
+
+" Global options
+set tabstop=2       " Treat a tab as 2 spaces
+set shiftwidth=2    " Indent uses 2 spaces
+set softtabstop=2   " Operations treat tab as 2 spaces
+set expandtab       " Replace tabs with spaces
+set history=700     " Can use a large history
+set wildmenu        " Better autocomplete
+set noerrorbells    " Do not ring the bell
+set hidden          " Allow buffers to be hidden when they have pending changes
+set backspace=indent,eol,start " Backspace can go past the beginning of the line
+set whichwrap+=<,>,h,l " Allow movement to go past beginning of the line
+set hlsearch        " Highlight search results
+set number          " Show line numbers
+set nobackup        " Do not make a backup when overwriting a file
+set nowritebackup   " Do not make a backup when overwriting a file
+set noswapfile      " Do not make swap files (make sure file sizes are not too big)
+set mouse=a         " Enable mouse support
 
